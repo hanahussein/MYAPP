@@ -4,28 +4,37 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+
 public class MYAppTest {
-	cart c=new cart();
+	cart ca= new cart();
 	@Test
 	public void test() {
 	
-	assertTrue(c.count(0)==0);
+		int count = ca.countt();
+		int price = ca.value();
+		assertEquals(0,count);
+		assertEquals(0,price);
 	}
 
 	
 	@Test 
 	public void test1() {
-		int val=127;
-		int co=1;
-	assertTrue(c.count(1)==co);
-	assertTrue(c.value(127)==val);
+		ca.addbook("javabook",172);
+		int count = ca.countt();
+		int price = ca.value();
+		assertEquals(1,count);
+		assertEquals(172,price);
 	}
 	
 	@Test
 	public void test2() {
-		int val=227;
-		int co=2;
-	assertTrue(c.count(2)==co);
-	assertTrue(c.value(227)==val);
+
+	    ca.addbook("javabook",172);
+		ca.addbook("web design book",100);
+		int count2 = ca.countt();
+		int price2 = ca.value();
+		assertEquals(2,count2);
+		assertEquals(272,price2);
+					
 	}
 }

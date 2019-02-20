@@ -1,21 +1,38 @@
 package testing;
+import java.util.ArrayList;
 
 public class cart {
 
-	public static int count(int s) {
+	   ArrayList<Integer> price = new ArrayList<Integer>();
+	    int totalcount;
+	   int totalcost;
+	public int countt() {
 		// TODO Auto-generated method stub
-		return s;
+		for(int j=0; j< price.size();j++) {
+			totalcount++;
+			}
+			
 		
+		return totalcount;
 	}
-
-	
-
-	public static int value(int f) {
+	public void addbook(String string, int i) {
 		// TODO Auto-generated method stub
-		
-			 
-			return f;
-	
+		 price.add(i);
 	}
+	public int value() {
+		// TODO Auto-generated method stub
+		for(int j =0 ; j< price.size() ; j++)
+		{
+			
+			totalcost = totalcost+price.get(j);
+		}
+
+		return totalcost;
+	}
+	  
+	
+	
+	
+	
 
 }
